@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RequestQueue requestQueue;
     private TextView osebe;
-    private String url = "https://unviersity-2021-dev.azurewebsites.net/api/v1/student";
+    private String url = "https://smartparking-is1.azurewebsites.net/api/v1/User";
 
 
     @Override
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void prikaziOsebe(View view){
         if (view != null){
-            JsonArrayRequest request = new JsonArrayRequest(url,jsonArrayListener, errorListener);
+            JsonArrayRequest request = new JsonArrayRequest(url,jsonArrayListener,errorListener);
             requestQueue.add(request);
         }
     }
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     String name = object.getString("name");
                     String surname = object.getString("surname");
 
-                    data.add(name + " " + surname);
+                    data.add( "★" +" "+ name + " " + surname);
                 } catch (JSONException e){
                     e.printStackTrace();
                     return;
