@@ -54,12 +54,16 @@ public class MainActivity extends AppCompatActivity {
                     String name = object.getString("name");
                     String surname = object.getString("surname");
 
+
                     data.add( "★" +" "+ name + " " + surname);
                 } catch (JSONException e){
                     e.printStackTrace();
                     return;
                 }
             }
+
+            osebe.setText("");
+
 
             for (String row: data){
                 String currentText = osebe.getText().toString();
