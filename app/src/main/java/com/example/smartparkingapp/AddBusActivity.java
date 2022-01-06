@@ -39,9 +39,9 @@ public class AddBusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_bus);
 
-        name = (EditText) findViewById(R.id.namecar); // povezemo z id-ji
-        surname = (EditText) findViewById(R.id.teNumber);
-        status = (TextView) findViewById(R.id.statuscar);
+        name = (EditText) findViewById(R.id.namebus); // povezemo z id-ji
+        surname = (EditText) findViewById(R.id.numberbus);
+        status = (TextView) findViewById(R.id.status1);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
     }
 
