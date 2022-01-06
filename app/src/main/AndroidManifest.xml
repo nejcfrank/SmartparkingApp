@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartparkingApp">
         <activity
-            android:name=".carAddActivity"
+            android:name=".AddCarActivity"
             android:exported="false" />
         <activity
-            android:name=".carActivity"
+            android:name=".CarActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,13 +28,13 @@
             android:exported="true" />
         <activity
             android:name=".BusActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".AddUserActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
     </application>
 
 </manifest>

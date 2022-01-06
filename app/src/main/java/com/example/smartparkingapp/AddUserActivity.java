@@ -38,7 +38,7 @@ public class AddUserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_user);
 
         name = (EditText) findViewById(R.id.namecar); // povezemo z id-ji
-        surname = (EditText) findViewById(R.id.teSurnamebus);
+        surname = (EditText) findViewById(R.id.color);
         status = (TextView) findViewById(R.id.statuscar);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 

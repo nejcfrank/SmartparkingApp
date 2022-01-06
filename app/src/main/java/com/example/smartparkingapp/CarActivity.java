@@ -2,8 +2,8 @@ package com.example.smartparkingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -20,7 +20,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class carActivity extends AppCompatActivity {
+public class CarActivity extends AppCompatActivity {
 
     private RequestQueue requestQueue;
     private TextView osebe;
@@ -30,8 +30,9 @@ public class carActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car);
+
         requestQueue = Volley.newRequestQueue(getApplicationContext());
-        osebe = (TextView) findViewById(R.id.avtomobili);
+        osebe = (TextView) findViewById(R.id.avti);
     }
 
     public void prikaziAvtomobile(View view){
@@ -77,13 +78,4 @@ public class carActivity extends AppCompatActivity {
             Log.d("REST error", error.getMessage());
         }
     };
-
-    //POVEZAVA STRANI
-    public static  final String EXTRA_MESSAGE ="com.example.smartparkingapp.MESSAGE";
-    public void addCarActivity(View view) {
-        Intent intent = new Intent(this, carAddActivity.class); // mogoce tukaj narobe
-        String message = " Add car to list.";
-        intent.putExtra(EXTRA_MESSAGE , message);
-        startActivity(intent);
-    }
 }
