@@ -2,6 +2,7 @@ package com.example.smartparkingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -78,4 +79,13 @@ public class CarActivity extends AppCompatActivity {
             Log.d("REST error", error.getMessage());
         }
     };
+
+    //POVEZAVA STRANI
+    public static  final String EXTRA_MESSAGE ="com.example.smartparkingapp.MESSAGE";
+    public void addCarActivity (View view) {
+        Intent intent = new Intent(this,AddCarActivity.class); // mogoce tukaj narobe
+        String message = " Add user to list.";
+        intent.putExtra(EXTRA_MESSAGE , message);
+        startActivity(intent);
+    }
 }
