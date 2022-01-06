@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/teNamebus"
+            android:id="@+id/namecar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -38,14 +38,14 @@
             android:text="Surname" />
 
         <Button
-            android:id="@+id/submitbus"
+            android:id="@+id/submitcar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="addUser"
             android:text="Send" />
 
         <TextView
-            android:id="@+id/statusbus"
+            android:id="@+id/statuscar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />

@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BusActivity">
+    tools:context=".carActivity">
 
     <TextView
 
-        android:id="@+id/bus"
+        android:id="@+id/avtomobili"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:text="LIST OF USERS "
+        android:text=" List of cars "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
@@ -27,24 +27,26 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:onClick="prikaziAvtobuse"
-        android:text="Show Buses"
+        android:onClick="prikaziAvtomobile"
+        android:text="Show parked cars"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
     <Button
-        android:id="@+id/addBusActivity"
+        android:id="@+id/addCarActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="272dp"
         android:layout_marginTop="8dp"
-        android:onClick="addBusActivity"
-        android:text="Add bus"
+        android:onClick="addCarActivity"
+        android:text="Add car"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
