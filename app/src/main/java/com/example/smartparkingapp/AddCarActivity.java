@@ -29,9 +29,9 @@ import java.io.UnsupportedEncodingException;
 
 public class AddCarActivity extends AppCompatActivity {
 
-    private TextView status;
-    private EditText name;
-    private EditText color;
+    private TextView status1;
+    private EditText name1;
+    private EditText color1;
 
     private RequestQueue requestQueue;
     private String url = "https://smartparking-is1.azurewebsites.net/api/v1/Cars";
@@ -42,22 +42,22 @@ public class AddCarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_car);
 
 
-        name = (EditText) findViewById(R.id.teNameCar); // povezemo z id-ji
-        color = (EditText) findViewById(R.id.teColor);
-        status = (TextView) findViewById(R.id.status);
+        name1 = (EditText) findViewById(R.id.teNameCar); // povezemo z id-ji
+        color1 = (EditText) findViewById(R.id.teColor);
+        status1 = (TextView) findViewById(R.id.status);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
     }
 
     public void addCar(View view){
-        this.status.setText("Posting to " + url);
+        this.status1.setText("Posting to " + url);
         try{
             JSONObject jsonBody = new JSONObject();
-            jsonBody.put("carType", name.getText());
-            jsonBody.put("carColor", color.getText());
+            jsonBody.put("carType", name1.getText());
+            jsonBody.put("carColor", color1.getText());
 
             final String mRequestBody = jsonBody.toString();
 
-            status.setText(mRequestBody);//v aplikaciji vidimo kaj se dogaja
+            status1.setText(mRequestBody);//v aplikaciji vidimo kaj se dogaja
 
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
@@ -90,7 +90,7 @@ public class AddCarActivity extends AppCompatActivity {
                     String responseString = "";
                     if (response != null) {
                         responseString = String.valueOf(response.statusCode);
-                        status.setText(responseString);
+                        status1.setText(responseString);
                     }
                     return Response.success(responseString, HttpHeaderParser.parseCacheHeaders(response));
                 }
