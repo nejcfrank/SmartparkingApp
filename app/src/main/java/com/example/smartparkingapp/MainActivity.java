@@ -79,4 +79,13 @@ public class MainActivity extends AppCompatActivity {
             Log.d("REST error", error.getMessage());
         }
     };
+
+    //POVEZAVA STRANI
+    public static  final String EXTRA_MESSAGE ="com.example.smartparkingapp.MESSAGE";
+    public void addUserActivity(View view) {
+        Intent intent = new Intent(this,AddUserActivity.class); // mogoce tukaj narobe
+        String message = " Add user to list.";
+        intent.putExtra(EXTRA_MESSAGE , message);
+        startActivity(intent);
+    }
 }
