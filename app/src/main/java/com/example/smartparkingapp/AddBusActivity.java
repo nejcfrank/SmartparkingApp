@@ -3,11 +3,11 @@ package com.example.smartparkingapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import android.util.Log;
-import android.view.View;
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
@@ -18,39 +18,39 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.UnsupportedEncodingException;
 
-public class AddUserActivity extends AppCompatActivity {
+public class AddBusActivity extends AppCompatActivity {
+
 
     private TextView status;
     private EditText name;
     private EditText surname;
 
     private RequestQueue requestQueue;
-    private String url = "https://smartparking-is1.azurewebsites.net/api/v1/User";
-
+    private String url = "https://smartparking-is1.azurewebsites.net/api/v1/Bus";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_user);
+        setContentView(R.layout.activity_add_bus);
 
         name = (EditText) findViewById(R.id.teNamebus); // povezemo z id-ji
-        surname = (EditText) findViewById(R.id.teSurnamebus);
+        surname = (EditText) findViewById(R.id.teNumber);
         status = (TextView) findViewById(R.id.statusbus);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
-
-
     }
 
-    public void addUser(View view){
+    public void addBus(View view){
         this.status.setText("Posting to " + url);
         try{
             JSONObject jsonBody = new JSONObject();
-            jsonBody.put("name", name.getText());
-            jsonBody.put("surname", surname.getText());
+            jsonBody.put("busName", name.getText());
+            jsonBody.put("passengers", surname.getText());
 
             final String mRequestBody = jsonBody.toString();
 
@@ -100,5 +100,4 @@ public class AddUserActivity extends AppCompatActivity {
         }
 
     }
-
 }
