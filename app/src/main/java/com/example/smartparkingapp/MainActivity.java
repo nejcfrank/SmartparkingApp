@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RequestQueue requestQueue;
     private TextView osebe;
-    private String url = "https://smartparking-is1.azurewebsites.net/api/v1/User";
+    private String url = "https://smartparking-is.azurewebsites.net/api/v1/User";
 
 
     @Override

@@ -29,7 +29,7 @@ public class AddUserActivity extends AppCompatActivity {
     private EditText surname;
 
     private RequestQueue requestQueue;
-    private String url = "https://smartparking-is1.azurewebsites.net/api/v1/User";
+    private String url = "https://smartparking-is.azurewebsites.net/api/v1/User";
 
 
     @Override

@@ -34,7 +34,7 @@ public class AddCarActivity extends AppCompatActivity {
     private EditText color1;
 
     private RequestQueue requestQueue;
-    private String url = "https://smartparking-is1.azurewebsites.net/api/v1/Cars";
+    private String url = "https://smartparking-is.azurewebsites.net/api/v1/Cars";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
