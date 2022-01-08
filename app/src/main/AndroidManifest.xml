@@ -12,18 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartparkingApp">
         <activity
+            android:name=".EnrollmentAdd"
+            android:exported="false" />
+        <activity
+            android:name=".EnrollmentActivity"
+            android:exported="true"></activity>
+        <activity
             android:name=".AllActivity"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity
             android:name=".AddCarActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CarActivity"
             android:exported="true">
